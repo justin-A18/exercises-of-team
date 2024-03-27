@@ -1,8 +1,8 @@
 <div align="center">
 
-<img alt="image" src="/public/image.jpeg" width="500" />
+<img alt="image" src="/public/image.jpeg" width="400" />
 
-# Introducción a typescript
+# Introducción a TypeScript
 
 </div>
 
