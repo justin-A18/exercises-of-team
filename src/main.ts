@@ -1,7 +1,9 @@
-import './styles/index.css';
-import typescriptLogo from '/typescript.svg';
+import "./styles/index.css";
+import typescriptLogo from "/typescript.svg";
+import "./prueba";
+import "./ejemplo";
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div class='flex-col-center flex-gap'>
     <div class='logo-container' href="https://www.typescriptlang.org/" target="_blank">
       <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />

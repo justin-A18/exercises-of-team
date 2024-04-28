@@ -1,4 +1,4 @@
-interface ManagerName{
+interface ManagerName {
   [key: string]: string;
 }
 
@@ -23,7 +23,10 @@ interface Paddock {
 
 interface Farm {
   id: number;
-  name: "AGRICOLA SANTA ANA" | "VINA SANTA PAULA" | "FORESTAL Y AGRICOLA LO ENCINA";
+  name:
+    | "AGRICOLA SANTA ANA"
+    | "VINA SANTA PAULA"
+    | "FORESTAL Y AGRICOLA LO ENCINA";
 }
 
 //? Responsables de las parcerlas
@@ -35,7 +38,6 @@ const paddockManagers: PaddockManager[] = [
   { id: 5, taxNumber: "216352696", name: "OSCAR PEREZ ZUÑIGA" },
   { id: 6, taxNumber: "78684747", name: "JOAQUIN ANDRADE SANDOVAL" },
 ];
-
 
 //? Tipo de parcela, en el cual se utiliza el tipo de producto plantado
 const paddockType: PaddockType[] = [
@@ -221,57 +223,39 @@ const farms: Farm[] = [
 //? Tip: Una hectárea equivale a 10.000m2
 
 //* 0 Arreglo con los ids de los responsables de cada cuartel
-function listPaddockManagerIds() {
-  
-}
+function listPaddockManagerIds() {}
 
 //* 1 Arreglo con los ruts de los responsables de los cuarteles, ordenados por nombre
-function listPaddockManagersByName() {
-  
-}
+function listPaddockManagersByName() {}
 
 //* 2 Arreglo con los nombres de cada tipo de cultivo, ordenados decrecientemente por la suma TOTAL de
 //* la cantidad de hectáreas plantadas de cada uno de ellos.
-function sortPaddockTypeByTotalArea() {
-  
-}
+function sortPaddockTypeByTotalArea() {}
 
 //* 3 Arreglo con los nombres de los administradores, ordenados decrecientemente por la suma TOTAL de
 //* hectáreas que administran.
-function sortFarmManagerByAdminArea() {
-  
-}
+function sortFarmManagerByAdminArea() {}
 
 //* 4 Objeto en que las claves sean los nombres de los campos y los valores un arreglo con los ruts de
 //* sus administradores ordenados alfabéticamente por nombre.
-function farmManagerNames() {
-  
-}
+function farmManagerNames() {}
 
 //* 5 Arreglo ordenado decrecientemente con los m2 totales de cada campo que tengan más de 2 hectáreas
 //* en Paltos
-function biggestAvocadoFarms() {
-  
-}
+function biggestAvocadoFarms() {}
 
 //* 6 Arreglo con nombres de los administradores de la 'FORESTAL Y AGRÍCOLA LO ENCINA', ordenados por nombre,
 //* que trabajen más de 1000 m2 de Cerezas
-function biggestCherriesManagers() {
-  
-}
+function biggestCherriesManagers() {}
 
 //* 7 Objeto en el cual las claves sean el nombre del administrador y el valor un arreglo con los nombres
 //* de los campos que administra, ordenados alfabéticamente
-function farmManagerPaddocks() {
-  
-}
+function farmManagerPaddocks() {}
 
 //* 8 Objeto en que las claves sean el tipo de cultivo concatenado con su año de plantación (la concatenación
 //* tiene un separador de guión ‘-’, por ejemplo AVELLANOS - 2020) y el valor otro objeto en el cual la clave
 //* sea el id del administrador y el valor el nombre del administrador
-function paddocksManagers() { 
-  
-}
+function paddocksManagers() {}
 
 //* 9 Agregar nuevo administrador con datos ficticios a "paddockManagers" y agregar un nuevo cuartel de
 //* tipo NOGALES con 900mts2, año 2017 de AGRICOLA SANTA ANA, administrado por este nuevo administrador
@@ -283,7 +267,6 @@ function newManagerRanking() {
 
 // No modificar, eliminar o alterar cualquier línea de código o comentario de acá para abajo
 // Cualquier cambio hará que su prueba quede invalidada automáticamente
-
 // console.log("Pregunta 0");
 // console.log(listPaddockManagerIds());
 // console.log("Pregunta 1");
