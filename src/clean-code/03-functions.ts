@@ -1,68 +1,66 @@
 (() => {
-  // función para obtener información de una película por Id
-  function getAllMovies(movieId: string) {
-    console.log({ movieId });
-  }
+	// función para obtener información de una película por Id
+	function getMovieById(movieId: string) {
+		console.log({ movieId });
+	}
 
-  // función para obtener información de los actores de una película - Actors o Cast // id = movieId getMovieCast
-  function getAllMovieActors(id: string) {
-    console.log({ id });
-  }
+	// función para obtener información de los actores de una película - Actors o Cast // id = movieId getMovieCast
+	function getMovieCast(id: string) {
+		console.log({ id });
+	}
 
-  // funcion para obtener el bio del actor por el id
-  function getUsuario(ActorId: string) {
-    console.log({ ActorId });
-  }
+	// funcion para obtener el bio del actor por el id
+	function getBiografyById(ActorId: string) {
+		console.log({ ActorId });
+	}
 
-  // Crear una película
-  function movie(
-    title: string,
-    description: string,
-    rating: number,
-    cast: string[]
-  ) {
-    console.log({ title, description, rating, cast });
-  }
+	interface Movie {
+		title: string;
+		description: string;
+		rating: number;
+		cast: string[];
+	}
 
-  // Crea un nuevo actor
-  function createActorIfActorNotExists(
-    fullName: string,
-    birthdate: Date
-  ): boolean {
-    // tarea asincrona para verificar nombre
-    // ..
-    // ..
-    if (fullName === "fernando") return false;
+	// Crear una película
+	function movie({ cast, description, rating, title }: Movie) {
+		console.log({ title, description, rating, cast });
+	}
 
-    console.log("Crear actor");
-    return true;
-  }
+	// Crea un nuevo actor
+	function createActor(fullName: string, birthdate: Date): boolean {
+		// tarea asincrona para verificar nombre
+		// ..
+		// ..
+		if (fullName === 'fernando') return false;
 
-  const getPayAmount = ({
-    isDead = false,
-    isSeparated = true,
-    isRetired = false,
-  }) => {
-    let result;
+		console.log('Crear actor');
+		return true;
+	}
 
-    if (isDead) {
-      result = 1500;
-    } else {
+	const getPayAmount = ({
+		isDead = false,
+		isSeparated = true,
+		isRetired = false,
+	}) => {
+		let result;
 
-      if (isSeparated) {
-        result = 2500;
-        
-      } else {
+		if (isDead) {
+			result = 1500;
+			return;
+		}
 
-        if (isRetired) {
-          result = 3000;
-        } else {
-          result = 4000;
-        }
+		if (isSeparated) {
+			result = 2500;
+			return;
+		}
 
-      }
-    }
+		if (isRetired) {
+			result = 3000;
+			return;
+		}
 
-    return result;
-  };
+		result = 4000;
+
+		return result;
+	};
 })();
