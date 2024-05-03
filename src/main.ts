@@ -2,6 +2,7 @@ import "./styles/index.css";
 import typescriptLogo from "/typescript.svg";
 import "./prueba";
 import "./ejemplo";
+import "./clean-code/04-homework"
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div class='flex-col-center flex-gap'>

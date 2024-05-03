@@ -1,11 +1,11 @@
 (() => {
   // función para obtener información de una película por Id
-  function getMoviesId(id: string) {
+  function getMovieId(id: string) {
     console.log({ id });
   }
 
   // función para obtener información de los actores de una película - Actors o Cast // id = movieId getMovieCast
-  function getInfoActorOrCast(id: string) {
+  function getInfoActor(id: string) {
     console.log({ id });
   }
 
@@ -15,7 +15,7 @@
   }
 
   // Crear una película
-  function movie(
+  function createMovie(
     title: string,
     description: string,
     rating: number,
@@ -25,7 +25,7 @@
   }
 
   // Crea un nuevo actor
-  function seActor(fullName: string, birthdate: Date): boolean {
+  function createActor(fullName: string, birthdate: Date): boolean {
     // tarea asincrona para verificar nombre
     // ..
     // ..
@@ -40,19 +40,11 @@
     isSeparated = true,
     isRetired = false,
   }) => {
-    let result;
+    if (isDead) return 1500; 
+    if (isSeparated) return 2500; 
 
-    if (isDead) {
-      return result = 1500;
-    } 
-    if (isSeparated) {
-      return result = 2500;
-    } 
     if (isRetired) {
-      return result = 3000;
-    } 
-      result = 4000;
-
-    return result;
+      return 3000;
+    } else { return 4000; }
   };
 })();
